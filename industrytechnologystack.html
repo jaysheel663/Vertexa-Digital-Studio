@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Industry Technology Stack|Vertexa</title>
+<link rel="stylesheet" href="../css/industrytechnologystack.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<div class="logo">VERTEXA</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="homepage.html">Home</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="innovation lab.html">Innovation</a>
+<a href="methodology.html">Methodology</a>
+<a href="insights.html">Insights</a>
+</div>
+</nav>
+</header>
+<section class="hero">
+<div>
+<span>INDUSTRY TECHNOLOGY STACK</span>
+<h1>Build the Technology Foundation Behind Digital Growth.</h1>
+<p>A successful digital business needs more than individual tools.It needs the right combination of experience,applications,data,AI,automation,integrations and infrastructure.</p>
+<button onclick="scrollToStack()">Explore Technology Stack</button>
+</div>
+<div class="stack-visual">
+<div>EXPERIENCE</div>
+<div>APPLICATIONS</div>
+<div>AI & INTELLIGENCE</div>
+<div>DATA</div>
+<div>AUTOMATION</div>
+<div>INFRASTRUCTURE</div>
+</div>
+</section>
+<section class="section" id="stack">
+<div class="heading">
+<span>THE DIGITAL FOUNDATION</span>
+<h2>Six Layers of a Modern Digital Business</h2>
+<p>Each layer has a specific role.Together they create a connected technology ecosystem.</p>
+</div>
+<div class="layers">
+<div class="layer">
+<b>01</b>
+<h3>Experience Layer</h3>
+<p>Everything customers and employees directly interact with.</p>
+<div class="tags">
+<span>Websites</span>
+<span>Mobile Apps</span>
+<span>Portals</span>
+<span>UX</span>
+</div>
+</div>
+<div class="layer">
+<b>02</b>
+<h3>Application Layer</h3>
+<p>Business applications that power processes and digital services.</p>
+<div class="tags">
+<span>CRM</span>
+<span>ERP</span>
+<span>CMS</span>
+<span>Platforms</span>
+</div>
+</div>
+<div class="layer">
+<b>03</b>
+<h3>AI & Intelligence</h3>
+<p>Systems that understand information and support intelligent decisions.</p>
+<div class="tags">
+<span>AI Agents</span>
+<span>Machine Learning</span>
+<span>Assistants</span>
+<span>Prediction</span>
+</div>
+</div>
+<div class="layer">
+<b>04</b>
+<h3>Data Layer</h3>
+<p>The foundation for reporting,analytics and intelligent experiences.</p>
+<div class="tags">
+<span>Customer Data</span>
+<span>Analytics</span>
+<span>Dashboards</span>
+<span>Warehouses</span>
+</div>
+</div>
+<div class="layer">
+<b>05</b>
+<h3>Automation Layer</h3>
+<p>Connect repetitive business processes through intelligent workflows.</p>
+<div class="tags">
+<span>Workflows</span>
+<span>Triggers</span>
+<span>AI Automation</span>
+<span>Notifications</span>
+</div>
+</div>
+<div class="layer">
+<b>06</b>
+<h3>Infrastructure Layer</h3>
+<p>The technical environment that supports reliability and scale.</p>
+<div class="tags">
+<span>Cloud</span>
+<span>Security</span>
+<span>APIs</span>
+<span>Monitoring</span>
+</div>
+</div>
+</div>
+</section>
+<section class="industry-section">
+<div class="heading light">
+<span>INDUSTRY CONFIGURATION</span>
+<h2>Different Industries Need Different Technology Combinations</h2>
+</div>
+<div class="industry-buttons">
+<button onclick="changeIndustry('healthcare')">Healthcare</button>
+<button onclick="changeIndustry('education')">Education</button>
+<button onclick="changeIndustry('retail')">Retail</button>
+<button onclick="changeIndustry('finance')">Finance</button>
+</div>
+<div class="industry-result" id="industryResult">
+<h3>Healthcare Technology Stack</h3>
+<p>Patient portals,appointment systems,secure data,analytics,automation and intelligent support experiences.</p>
+</div>
+</section>
+<section class="section">
+<div class="heading">
+<span>VERTEXA PRINCIPLES</span>
+<h2>Technology Should Serve the Business</h2>
+</div>
+<div class="principles">
+<div>
+<h3>Purpose Before Tools</h3>
+<p>Start with the business problem before selecting technology.</p>
+</div>
+<div>
+<h3>Composable Systems</h3>
+<p>Build systems that can evolve without rebuilding everything.</p>
+</div>
+<div>
+<h3>Connected Data</h3>
+<p>Make important information available across relevant experiences.</p>
+</div>
+<div>
+<h3>Security by Design</h3>
+<p>Consider security and governance from the beginning.</p>
+</div>
+<div>
+<h3>AI Where Useful</h3>
+<p>Introduce AI when it improves decisions,efficiency or experiences.</p>
+</div>
+<div>
+<h3>Designed for Scale</h3>
+<p>Create foundations capable of supporting future growth.</p>
+</div>
+</div>
+</section>
+<section class="cta">
+<h2>Let's Design Your Technology Foundation.</h2>
+<p>Move from disconnected tools toward a structured digital technology stack.</p>
+<button onclick="showMessage()">Discuss Your Stack</button>
+</section>
+<footer>© 2026 Vertexa Digital Agency. All Rights Reserved.</footer>
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+function scrollToStack(){
+document.getElementById("stack").scrollIntoView({behavior:"smooth"});
+}
+function changeIndustry(type){
+const data={
+healthcare:["Healthcare Technology Stack","Patient portals,appointment systems,secure data,analytics,automation and intelligent support experiences."],
+education:["Education Technology Stack","Learning platforms,student portals,content systems,analytics,AI tutors and automated communication."],
+retail:["Retail Technology Stack","Commerce platforms,personalization,inventory systems,customer data,recommendation engines and marketing automation."],
+finance:["Finance Technology Stack","Secure applications,customer platforms,analytics,intelligent risk systems,automation and connected financial data."]
+};
+document.getElementById("industryResult").innerHTML="<h3>"+data[type][0]+"</h3><p>"+data[type][1]+"</p>";
+}
+function showMessage(){
+alert("Vertexa can help you design a technology stack around your business goals.");
+}
+</script>
+</body>
+</html>

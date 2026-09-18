@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Innovation Radar|Vertexa</title>
+    <link rel="stylesheet" href="../css/innovationrader.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">VERTEXA</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="../services/services.html">Services</a></li>
+            <li><a href="../industries/industries.html">Industries</a></li>
+            <li><a href="../innovation/innovationlab.html">Innovation Lab</a></li>
+            <li><a href="../innovation/innovationchallenge.html">Innovation Challenge</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+    <div>
+        <span>VERTEXA INNOVATION RADAR</span>
+        <h1>Track the Technologies That Could Change Digital Business.</h1>
+        <p>Our Innovation Radar organizes emerging technologies by maturity,business relevance and potential application.</p>
+    </div>
+    <div class="radar">
+        <div class="radar-ring r1"></div>
+        <div class="radar-ring r2"></div>
+        <div class="radar-ring r3"></div>
+        <div class="radar-center">VX</div>
+        <span class="radar-dot d1">AI</span>
+        <span class="radar-dot d2">AUTO</span>
+        <span class="radar-dot d3">AGENTS</span>
+        <span class="radar-dot d4">DATA</span>
+    </div>
+</section>
+<section class="section" id="radar">
+    <div class="title">
+        <span>TECHNOLOGY RADAR</span>
+        <h2>Where Technologies Sit on the Innovation Curve</h2>
+    </div>
+    <div class="radar-grid">
+        <div class="radar-card now">
+            <span>NOW</span>
+            <h3>Ready to Apply</h3>
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Cloud Platforms</li>
+                <li>Business Automation</li>
+                <li>Advanced Analytics</li>
+                <li>Personalization</li>
+            </ul>
+        </div>
+        <div class="radar-card emerging">
+            <span>EMERGING</span>
+            <h3>Experiment & Learn</h3>
+            <ul>
+                <li>AI Agents</li>
+                <li>Predictive Experiences</li>
+                <li>Intelligent Search</li>
+                <li>Voice Interfaces</li>
+                <li>Generative Systems</li>
+            </ul>
+        </div>
+        <div class="radar-card watch">
+            <span>WATCH</span>
+            <h3>Explore Carefully</h3>
+            <ul>
+                <li>Spatial Computing</li>
+                <li>Autonomous Systems</li>
+                <li>Robotics</li>
+                <li>New Interaction Models</li>
+                <li>Advanced Simulation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="dark-section">
+    <div class="title light">
+        <span>VERTEXA PERSPECTIVE</span>
+        <h2>Innovation Should Solve Real Problems</h2>
+    </div>
+    <div class="principles">
+        <div>
+            <b>01</b>
+            <h3>Business Value</h3>
+            <p>Technology matters when it creates measurable customer,operational or strategic value.</p>
+        </div>
+        <div>
+            <b>02</b>
+            <h3>Experiment First</h3>
+            <p>Small experiments help teams learn before committing significant resources.</p>
+        </div>
+        <div>
+            <b>03</b>
+            <h3>Human Experience</h3>
+            <p>New technology should make digital experiences more useful,not simply more complicated.</p>
+        </div>
+        <div>
+            <b>04</b>
+            <h3>Responsible Adoption</h3>
+            <p>Security,privacy,reliability and governance should be part of innovation from the beginning.</p>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="title">
+        <span>INNOVATION TIMELINE</span>
+        <h2>From Emerging Signal to Business Capability</h2>
+    </div>
+    <div class="timeline">
+        <div>
+            <strong>01</strong>
+            <h3>Observe</h3>
+            <p>Identify emerging technology and customer signals.</p>
+        </div>
+        <div>
+            <strong>02</strong>
+            <h3>Research</h3>
+            <p>Understand capabilities,limitations and applications.</p>
+        </div>
+        <div>
+            <strong>03</strong>
+            <h3>Experiment</h3>
+            <p>Build a small proof of concept.</p>
+        </div>
+        <div>
+            <strong>04</strong>
+            <h3>Validate</h3>
+            <p>Measure business and customer impact.</p>
+        </div>
+        <div>
+            <strong>05</strong>
+            <h3>Scale</h3>
+            <p>Turn successful experiments into capabilities.</p>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h2>Find Your Next Innovation Opportunity.</h2>
+    <p>Explore technology through the lens of your business.</p>
+    <button onclick="radarMessage()">Explore an Innovation Idea</button>
+</section>
+<footer>
+    © 2026 Vertexa Digital Agency. All Rights Reserved.
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+function radarMessage(){
+    alert("Vertexa Innovation Radar is ready to help you explore new digital opportunities.");
+}
+</script>
+</body>
+</html>

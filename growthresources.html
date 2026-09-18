@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Growth Resources|Vertexa Digital Agency</title>
+    <link rel="stylesheet" href="../css/growthresources.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Vertexa<span></span></div>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="../services/services.html">Services</a>
+        <a href="../insights/insightsandresources.html">Insights</a>
+        <a href="../resources/digitalmarketingtools.html">Tools</a>
+        <a href="../resources/growthresources.html" class="active">Resources</a>
+        <a href="../contact/contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-button">Talk to Vertexa</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="homepage.html">Home</a>
+    <a href="../services/services.html">Services</a>
+    <a href="../insights/insightsandresources.html">Insights</a>
+    <a href="../resources/digitalmarketingtools.html">Tools</a>
+    <a href="../resources/growthresources.html">Resources</a>
+    <a href="../contact/contact.html">Contact</a>
+</div>
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">VERTEXA GROWTH RESOURCES</span>
+        <h1>Ideas,Tools&Resources<span>For Digital Growth</span></h1>
+        <p>Explore practical resources from Vertexa designed to help businesses think smarter about digital strategy,branding,marketing,technology,AI and customer experience.</p>
+        <p>Whether you're planning your first digital product or looking to improve an existing digital ecosystem,start with the resource that matches your current challenge.</p>
+        <a href="resources.html" class="hero-btn">Explore Resources ↓</a>
+    </div>
+    <div class="resource-visual">
+        <div class="resource-window">
+            <div class="window-top">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="visual-title"></div>
+            <div class="visual-grid">
+                <div>
+                    <strong>01</strong>
+                    <span>Guides</span>
+                </div>
+                <div>
+                    <strong>02</strong>
+                    <span>Tools</span>
+                </div>
+                <div>
+                    <strong>03</strong>
+                    <span>Playbooks</span>
+                </div>
+                <div>
+                    <strong>04</strong>
+                    <span>Checklists</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section intro">
+    <div class="section-heading center">
+        <span class="tag">LEARN•PLAN•BUILD•GROW</span>
+        <h2>A Resource Library Built for Digital Decision-Makers</h2>
+        <p>Digital transformation can feel complex.Our resources break complex topics into practical ideas,frameworks and tools that help teams make better decisions.</p>
+    </div>
+    <div class="resource-types">
+        <div class="resource-type">
+            <span>📘</span>
+            <h3>Guides</h3>
+            <p>Detailed explanations covering digital strategy,marketing,UX,technology and emerging trends.</p>
+        </div>
+        <div class="resource-type">
+            <span>🧮</span>
+            <h3>Tools</h3>
+            <p>Interactive calculators and simple tools that help evaluate digital opportunities and campaign performance.</p>
+        </div>
+        <div class="resource-type">
+            <span>📋</span>
+            <h3>Checklists</h3>
+            <p>Practical checklists that help teams prepare websites,campaigns,launches and digital projects.</p>
+        </div>
+        <div class="resource-type">
+            <span>🚀</span>
+            <h3>Playbooks</h3>
+            <p>Structured frameworks for approaching digital growth,customer experience and technology transformation.</p>
+        </div>
+    </div>
+</section>
+<section class="section resources" id="resources">
+    <div class="section-heading">
+        <span class="tag">RESOURCE LIBRARY</span>
+        <h2>Explore Our Latest Resources</h2>
+        <p>Browse resources by topic or search for something specific.New resources can be added to this library as your Vertexa platform grows.</p>
+    </div>
+    <div class="resource-controls">
+        <input type="text"id="resourceSearch"placeholder="Search resources..."onkeyup="filterResources()">
+        <div class="filter-buttons">
+            <button onclick="filterCategory('all')" class="filter active">All</button>
+            <button onclick="filterCategory('strategy')" class="filter">Strategy</button>
+            <button onclick="filterCategory('marketing')" class="filter">Marketing</button>
+            <button onclick="filterCategory('ai')" class="filter">AI</button>
+            <button onclick="filterCategory('design')" class="filter">Design</button>
+            <button onclick="filterCategory('technology')" class="filter">Technology</button>
+        </div>
+    </div>
+     <div class="resource-grid" id="resourceGrid">
+        <article class="resource-card" data-category="strategy">
+            <div class="resource-icon">🧭</div>
+            <span class="resource-type-label">GUIDE</span>
+            <h3>Digital Transformation Strategy Guide</h3>
+            <p>Understand how businesses can move from disconnected digital activities toward a structured transformation strategy.</p>
+            <button onclick="showResource('Digital Transformation Strategy Guide')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="marketing">
+            <div class="resource-icon">📈</div>
+            <span class="resource-type-label">PLAYBOOK</span>
+            <h3>Digital Growth Playbook</h3>
+            <p>Explore a practical framework covering audience research,positioning,content,campaigns,conversion and analytics.</p>
+            <button onclick="showResource('Digital Growth Playbook')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="ai">
+            <div class="resource-icon">🤖</div>
+            <span class="resource-type-label">GUIDE</span>
+            <h3>AI for Business Starter Guide</h3>
+            <p>Learn how organizations can identify practical AI opportunities without treating AI as a technology-only project.</p>
+            <button onclick="showResource('AI for Business Starter Guide')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="design">
+            <div class="resource-icon">🎨</div>
+            <span class="resource-type-label">CHECKLIST</span>
+            <h3>Website UX Checklist</h3>
+            <p>Review important UX areas such as navigation,content,accessibility,mobile experience,forms and conversion paths.</p>
+            <button onclick="showResource('Website UX Checklist')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="technology">
+            <div class="resource-icon">💻</div>
+            <span class="resource-type-label">GUIDE</span>
+            <h3>Choosing the Right Technology Stack</h3>
+            <p>Understand the key factors businesses should consider when selecting technologies for websites,applications and platforms.</p>
+            <button onclick="showResource('Choosing the Right Technology Stack')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="marketing">
+            <div class="resource-icon">🎯</div>
+            <span class="resource-type-label">CHECKLIST</span>
+            <h3>Campaign Launch Checklist</h3>
+            <p>Prepare your next digital marketing campaign with a structured checklist covering creative,audience,tracking and optimization.</p>
+            <button onclick="showResource('Campaign Launch Checklist')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="ai">
+            <div class="resource-icon">🧠</div>
+            <span class="resource-type-label">PLAYBOOK</span>
+            <h3>AI Automation Opportunity Map</h3>
+            <p>Identify repetitive business processes that could potentially benefit from intelligent automation and AI-assisted workflows.</p>
+            <button onclick="showResource('AI Automation Opportunity Map')">Explore Resource→</button>
+        </article>
+        <article class="resource-card" data-category="strategy">
+            <div class="resource-icon">📊</div>
+            <span class="resource-type-label">FRAMEWORK</span>
+            <h3>Digital Maturity Framework</h3>
+            <p>Understand the major stages businesses can move through as their digital capabilities become more connected and advanced.</p>
+            <button onclick="showResource('Digital Maturity Framework')">Explore Resource→</button>
+        </article>
+    </div>
+    <div id="noResults" class="no-results">
+        <h3>No resources found</h3>
+        <p>Try another keyword or choose a different category.</p>
+    </div>
+</section>
+<section class="featured section">
+    <div class="featured-content">
+        <span class="tag">FEATURED RESOURCE</span>
+        <h2>The Vertexa Digital Growth Framework</h2>
+        <p>A practical way to think about digital growth across four connected areas:strategy,experience,technology and growth.</p>
+        <div class="framework-list">
+            <div>
+                <strong>01</strong>
+                <span>Define the opportunity</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Design the experience</span>
+            </div>
+            <div>
+                <strong>03</strong>
+                <span>Build the technology</span>
+            </div>
+            <div>
+                <strong>04</strong>
+                <span>Measure and grow</span>
+            </div>
+        </div>
+        <button onclick="showResource('Vertexa Digital Growth Framework')" class="primary-btn">Explore Framework→</button>
+    </div>
+    <div class="featured-visual">
+        <div class="framework-circle">
+            <span>GROW</span>
+        </div>
+        <div class="framework-node fn-one">STRATEGY</div>
+        <div class="framework-node fn-two">EXPERIENCE</div>
+        <div class="framework-node fn-three">TECHNOLOGY</div>
+        <div class="framework-node fn-four">DATA</div>
+    </div>
+</section>
+<div id="resourceModal" class="modal">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <span class="tag">VERTEXA RESOURCE</span>
+        <h2 id="modalTitle">Resource</h2>
+        <p id="modalText">This resource can be expanded into a detailed guide,downloadable document or interactive experience as the Vertexa website grows.</p>
+        <a href="contact.html" class="primary-btn">Talk to Vertexa</a>
+    </div>
+</div>
+<section class="cta-section">
+    <span class="tag">NEED MORE THAN A RESOURCE?</span>
+    <h2>Let's Apply the Ideas to Your Business.</h2>
+    <p>Resources can help you understand possibilities.Vertexa can help turn those possibilities into strategy,design,technology and measurable digital experiences.</p>
+    <a href="contact.html" class="cta-button">Start a Conversation→</a>
+</section>
+<footer>
+    <p>© 2026 Vertexa Digital Agency.All Rights Reserved.</p>
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+let currentCategory="all";
+function filterCategory(category){
+    currentCategory=category;
+    document.querySelectorAll(".filter").forEach(button => {
+        button.classList.remove("active");
+    });
+    event.target.classList.add("active");
+    filterResources();
+}
+function filterResources(){
+    const search=document.getElementById("resourceSearch").value.toLowerCase();
+        const cards=document.querySelectorAll(".resource-card");
+        let visible = 0;
+    cards.forEach(card=>{
+        const category=card.getAttribute("data-category");
+            const text=card.innerText.toLowerCase();
+            const categoryMatch=currentCategory==="all"||category === currentCategory;
+            const searchMatch=text.includes(search);
+            if(categoryMatch&&searchMatch){
+            card.style.display = "block";
+            visible++;
+        }else{
+            card.style.display = "none";
+        }
+    });
+    document.getElementById("noResults").style.display=visible===0?"block":"none";
+}
+function showResource(title){
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalText").textContent="This Vertexa resource is designed to provide practical ideas, frameworks and guidance. In a complete production version, this section could open a detailed article, downloadable guide, checklist or interactive resource.";
+        document.getElementById("resourceModal").classList.add("show");
+}
+function closeModal(){
+    document.getElementById("resourceModal").classList.remove("show");
+}
+window.onclick=function(event){
+    const modal=document.getElementById("resourceModal");
+        if(event.target===modal){
+        modal.classList.remove("show");
+    }
+};
+</script>
+</body>
+</html>

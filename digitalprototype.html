@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Prototype Studio|Vertexa</title>
+<link rel="stylesheet" href="../css/digitalprototype.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<div class="logo">VERTEXA</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="homepage.html">Home</a>
+<a href="../services/services.html">Services</a>
+<a href="../industries/industries.html">Industries</a>
+<a href="../innovation/innovationlab.html">Innovation</a>
+<a href="../methodology/methodology.html">Methodology</a>
+<a href="../insights/insightsandresources.html">Insights</a>
+</div>
+</nav>
+</header>
+<section class="hero">
+<div>
+<span>DIGITAL PROTOTYPE STUDIO</span>
+<h1>Turn Digital Ideas Into Something You Can See.</h1>
+<p>Before investing heavily in a digital product,prototype the experience,test the idea,understand the user journey and learn what should change.</p>
+<button onclick="scrollToPrototype()">Explore Prototyping</button>
+</div>
+<div class="prototype-window">
+<div class="window-top">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="screen">
+<div class="screen-title"></div>
+<div class="screen-row"></div>
+<div class="screen-row short"></div>
+<div class="screen-card"></div>
+<div class="screen-card"></div>
+</div>
+</div>
+</section>
+<section class="section" id="prototype">
+<div class="heading">
+<span>PROTOTYPE TYPES</span>
+<h2>From Simple Concepts to Advanced Digital Experiences</h2>
+</div>
+<div class="prototype-grid">
+<div>
+<b>01</b>
+<h3>Concept Prototype</h3>
+<p>Quickly visualize an early product concept,workflow or service idea.</p>
+</div>
+<div>
+<b>02</b>
+<h3>UX Prototype</h3>
+<p>Explore navigation,information architecture,interaction and customer journeys.</p>
+</div>
+<div>
+<b>03</b>
+<h3>Interactive Prototype</h3>
+<p>Create clickable experiences that simulate important product behavior.</p>
+</div>
+<div>
+<b>04</b>
+<h3>AI Prototype</h3>
+<p>Experiment with AI assistants,intelligent recommendations and AI-powered workflows.</p>
+</div>
+<div>
+<b>05</b>
+<h3>Service Prototype</h3>
+<p>Prototype complete customer and employee service experiences across multiple touchpoints.</p>
+</div>
+<div>
+<b>06</b>
+<h3>Data Prototype</h3>
+<p>Explore dashboards,insights,decision systems and data-driven experiences.</p>
+</div>
+</div>
+</section>
+<section class="dark">
+<div class="heading light">
+<span>PROTOTYPING PROCESS</span>
+<h2>Idea→Prototype→Learning</h2>
+</div>
+<div class="process">
+<div>
+<strong>01</strong>
+<h3>Frame</h3>
+<p>Define the problem and desired outcome.</p>
+</div>
+<div>
+<strong>02</strong>
+<h3>Sketch</h3>
+<p>Translate ideas into simple experience concepts.</p>
+</div>
+<div>
+<strong>03</strong>
+<h3>Build</h3>
+<p>Create an interactive prototype.</p>
+</div>
+<div>
+<strong>04</strong>
+<h3>Test</h3>
+<p>Observe how users understand the experience.</p>
+</div>
+<div>
+<strong>05</strong>
+<h3>Learn</h3>
+<p>Identify what should change before development.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="heading">
+<span>PROTOTYPE GALLERY</span>
+<h2>What We Can Prototype</h2>
+</div>
+<div class="gallery">
+<div class="gallery-card">
+<h3>AI Assistant</h3>
+<p>Conversational interface for customer questions and business workflows.</p>
+<button onclick="preview('AI Assistant')">Preview</button></div>
+<div class="gallery-card">
+<h3>Smart Dashboard</h3>
+<p>Executive dashboard showing business performance and intelligent signals.</p>
+<button onclick="preview('Smart Dashboard')">Preview</button></div>
+<div class="gallery-card">
+<h3>Customer Portal</h3>
+<p>Connected digital portal for accounts,services,documents and communication.</p>
+<button onclick="preview('Customer Portal')">Preview</button></div>
+<div class="gallery-card">
+<h3>Personalization Engine</h3>
+<p>Prototype experiences that adapt content and recommendations based on user behavior.</p>
+<button onclick="preview('Personalization Engine')">Preview</button></div>
+</div>
+</section>
+<section class="section">
+<div class="heading">
+<span>WHY PROTOTYPE?</span>
+<h2>Reduce Uncertainty Before Building</h2>
+</div>
+<div class="benefits">
+<div>
+<h3>Clarify the Idea</h3>
+<p>Make abstract concepts easier for teams and stakeholders to understand.</p>
+</div>
+<div>
+<h3>Find Experience Problems</h3>
+<p>Discover confusing interactions before development begins.</p>
+</div>
+<div>
+<h3>Align Stakeholders</h3>
+<p>Create a shared visual reference for product,business and technology teams.</p>
+</div>
+<div>
+<h3>Learn Earlier</h3>
+<p>Get feedback before committing significant development resources.</p>
+</div>
+</div>
+</section>
+<section class="cta">
+<h2>Have an Idea Worth Prototyping?</h2>
+<p>Let's transform the concept into an experience your team can explore.</p>
+<button onclick="showMessage()">Start a Prototype</button>
+</section>
+<footer>© 2026 Vertexa Digital Agency. All Rights Reserved.</footer>
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+function scrollToPrototype(){
+document.getElementById("prototype").scrollIntoView({behavior:"smooth"});
+}
+function preview(name){
+alert(name+" prototype selected. Vertexa can turn this concept into an interactive experience.");
+}
+function showMessage(){
+alert("Let's turn your idea into a digital prototype.");
+}
+</script>
+</body>
+</html>

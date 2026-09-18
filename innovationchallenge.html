@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Innovation Challenge Studio|Vertexa</title>
+    <link rel="stylesheet" href="../css/innovationchallenge.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">VERTEXA</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="../services/services.html">Services</a></li>
+            <li><a href="../industries/industries.html">Industries</a></li>
+            <li><a href="../innovation/innovationlab.html">Innovation Lab</a></li>
+            <li><a href="../innovation/innovationrader.html">Innovation Radar</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <span>VERTEXA INNOVATION CHALLENGE STUDIO</span>
+        <h1>Have a Digital Challenge?Let's Experiment.</h1>
+        <p>Big digital problems rarely have one obvious answer.Vertexa helps businesses turn challenges into hypotheses,experiments,prototypes and scalable solutions.</p>
+    </div>
+    <div class="challenge-visual">
+        <div class="challenge-node">PROBLEM</div>
+        <div class="line"></div>
+        <div class="challenge-node">IDEA</div>
+        <div class="line"></div>
+        <div class="challenge-node">EXPERIMENT</div>
+        <div class="line"></div>
+        <div class="challenge-node">PROTOTYPE</div>
+    </div>
+</section>
+<section class="section" id="challenge">
+    <div class="title">
+        <span>CHALLENGE BUILDER</span>
+        <h2>What Digital Challenge Are You Solving?</h2>
+        <p>Select a challenge to see a possible Vertexa innovation path.</p>
+    </div>
+    <div class="challenge-grid">
+        <button onclick="selectChallenge('conversion')">
+            <strong>Increase Conversions</strong>
+            <small>Improve digital customer journeys.</small>
+        </button>
+        <button onclick="selectChallenge('automation')">
+            <strong>Automate Operations</strong>
+            <small>Reduce repetitive business work.</small>
+        </button>
+        <button onclick="selectChallenge('experience')">
+            <strong>Improve Experience</strong>
+            <small>Make customer interactions simpler.</small>
+        </button>
+        <button onclick="selectChallenge('ai')">
+            <strong>Introduce AI</strong>
+            <small>Find practical AI opportunities.</small>
+        </button>
+        <button onclick="selectChallenge('marketing')">
+            <strong>Improve Marketing</strong>
+            <small>Create smarter growth systems.</small>
+        </button>
+        <button onclick="selectChallenge('product')">
+            <strong>Create Digital Product</strong>
+            <small>Turn an idea into a digital experience.</small>
+        </button>
+    </div>
+    <div class="result-box">
+        <span>YOUR INNOVATION PATH</span>
+        <h2 id="resultTitle">Choose a Challenge</h2>
+        <p id="resultText">Select one of the challenges above to generate a possible innovation pathway.</p>
+        <div class="path">
+            <div>CHALLENGE</div>
+            <span>→</span>
+            <div>HYPOTHESIS</div>
+            <span>→</span>
+            <div>EXPERIMENT</div>
+            <span>→</span>
+            <div>PROTOTYPE</div>
+            <span>→</span>
+            <div>SCALE</div>
+        </div>
+    </div>
+</section>
+<section class="dark-section">
+    <div class="title light">
+        <span>RAPID EXPERIMENTATION</span>
+        <h2>Our Innovation Sprint</h2>
+        <p>Move from an uncertain idea to evidence-backed direction through a focused experimentation cycle.</p>
+    </div>
+    <div class="sprint">
+        <div>
+            <b>01</b>
+            <h3>Frame</h3>
+            <p>Define the business challenge and desired outcome.</p>
+        </div>
+        <div>
+            <b>02</b>
+            <h3>Hypothesize</h3>
+            <p>Develop assumptions about what could work.</p>
+        </div>
+        <div>
+            <b>03</b>
+            <h3>Prototype</h3>
+            <p>Create a simple representation of the idea.</p>
+        </div>
+        <div>
+            <b>04</b>
+            <h3>Test</h3>
+            <p>Collect feedback and evidence from real users or teams.</p>
+        </div>
+        <div>
+            <b>05</b>
+            <h3>Decide</h3>
+            <p>Learn,improve,scale or change direction.</p>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="title">
+        <span>EXPERIMENT SCORECARD</span>
+        <h2>How We Think About Innovation</h2>
+    </div>
+    <div class="score-grid">
+        <div>
+            <span>VALUE</span>
+            <h3>Does it solve a meaningful problem?</h3>
+            <p>Innovation should connect to customer or business value.</p>
+        </div>
+        <div>
+            <span>FEASIBILITY</span>
+            <h3>Can it realistically be built?</h3>
+            <p>Ideas should consider technology, resources and constraints.</p>
+        </div>
+        <div>
+            <span>DESIRABILITY</span>
+            <h3>Will people actually use it?</h3>
+            <p>Customer and employee needs remain central to experimentation.</p>
+        </div>
+        <div>
+            <span>SCALABILITY</span>
+            <h3>Can the idea grow?</h3>
+            <p>Successful experiments should have a path toward sustainable scale.</p>
+        </div>
+    </div>
+</section>
+<section class="workshop">
+    <div>
+        <span>INNOVATION WORKSHOP</span>
+        <h2>Bring Us the Difficult Problem.</h2>
+        <p>You don't need to arrive with a perfect solution.Bring the challenge,the constraints and the questions.We'll help structure the path toward experimentation.</p>
+        <button onclick="workshopMessage()">Start a Workshop</button>
+    </div>
+    <div class="workshop-card">
+        <div>01—Business Challenge</div>
+        <div>02—Customer Need</div>
+        <div>03—Technology Opportunity</div>
+        <div>04—Experiment Design</div>
+        <div>05—Prototype Direction</div>
+    </div>
+</section>
+<footer>
+    © 2026 Vertexa Digital Agency.All Rights Reserved.
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+function selectChallenge(type){
+    const title=document.getElementById("resultTitle");
+    const text=document.getElementById("resultText");
+    if(type==="conversion"){
+        title.innerText="Conversion Innovation Path";
+        text.innerText="Map the customer journey,identify friction,experiment with experience improvements and measure conversion behavior.";
+    }
+    if(type==="automation"){
+        title.innerText="Automation Innovation Path";
+        text.innerText="Identify repetitive processes,map workflow dependencies,prototype automation and validate operational impact.";
+    }
+    if(type==="experience"){
+        title.innerText="Customer Experience Innovation Path";
+        text.innerText="Study customer moments,identify friction,redesign interactions and test a more useful digital experience.";
+    }
+    if(type==="ai"){
+        title.innerText="AI Innovation Path";
+        text.innerText="Identify a meaningful business problem,evaluate AI opportunities,prototype an intelligent solution and validate usefulness.";
+    }
+    if(type==="marketing"){
+        title.innerText="Marketing Innovation Path";
+        text.innerText="Connect customer insights,content,campaigns and automation to create a smarter growth system.";
+    }
+    if(type==="product"){
+        title.innerText="Digital Product Innovation Path";
+        text.innerText="Move from concept to prototype by defining users,value proposition,core features and a validation plan.";
+    }
+}
+function workshopMessage(){
+    alert("Vertexa Innovation Workshop is ready.Bring your challenge and start experimenting.");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Industry Experience Map|Vertexa</title>
+    <link rel="stylesheet" href="../css/industryexperiencemap.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">VERTEXA</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="../services/services.html">Services</a></li>
+            <li><a href="../industries/industries.html">Industries</a></li>
+            <li><a href="../industries/industryintelligence.html">Intelligence</a></li>
+            <li><a href="../innovation/innovationlab.html">Innovation</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <span>VERTEXA EXPERIENCE MAP</span>
+        <h1>See Every Moment Between Your Customer and Your Brand.</h1>
+        <p>Experience mapping helps businesses understand what customers see,feel,expect and experience at every stage of their journey.</p>
+    </div>
+    <div class="journey-visual">
+        <div class="journey-line"></div>
+        <div class="journey-node">DISCOVER</div>
+        <div class="journey-node">EXPLORE</div>
+        <div class="journey-node">INTERACT</div>
+        <div class="journey-node">CONVERT</div>
+        <div class="journey-node">RETURN</div>
+    </div>
+</section>
+<section class="section" id="maps">
+    <div class="title">
+        <span>INDUSTRY JOURNEYS</span>
+        <h2>Every Industry Has a Different Customer Journey</h2>
+        <p>Select an industry to explore the key digital moments that influence customer decisions.</p>
+    </div>
+    <div class="industry-buttons">
+        <button onclick="showJourney('retail')">Retail</button>
+        <button onclick="showJourney('healthcare')">Healthcare</button>
+        <button onclick="showJourney('education')">Education</button>
+        <button onclick="showJourney('finance')">Finance</button>
+    </div>
+    <div class="map-box">
+        <h2 id="journeyTitle">Retail Customer Journey</h2>
+        <p id="journeyDescription">Customers discover products,compare options,purchase,receive their order and eventually become loyal customers.</p>
+        <div class="journey-map" id="journeyMap">
+            <div>DISCOVER</div>
+            <span>→</span>
+            <div>RESEARCH</div>
+            <span>→</span>
+            <div>COMPARE</div>
+            <span>→</span>
+            <div>PURCHASE</div>
+            <span>→</span>
+            <div>LOYALTY</div>
+        </div>
+    </div>
+</section>
+<section class="dark-section">
+    <div class="title light">
+        <span>FRICTION POINTS</span>
+        <h2>Where Customers Lose Momentum</h2>
+    </div>
+    <div class="friction-grid">
+        <div>
+            <span>01</span>
+            <h3>Too Much Complexity</h3>
+            <p>Customers struggle when websites contain too many steps,confusing navigation or unclear information.</p>
+        </div>
+        <div>
+            <span>02</span>
+            <h3>Slow Response</h3>
+            <p>Delayed communication can create uncertainty and reduce trust.</p>
+        </div>
+        <div>
+            <span>03</span>
+            <h3>Disconnected Channels</h3>
+            <p>Customers expect information to continue smoothly across websites,apps,email and support channels.</p>
+        </div>
+        <div>
+            <span>04</span>
+            <h3>Generic Experiences</h3>
+            <p>Customers increasingly expect relevant and personalized interactions.</p>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="title">
+        <span>DIGITAL TOUCHPOINTS</span>
+        <h2>Design Every Interaction</h2>
+    </div>
+    <div class="touch-grid">
+        <div>
+            <h3>Website</h3>
+            <p>Discovery,education,comparison and conversion.</p>
+        </div>
+        <div>
+            <h3>Search</h3>
+            <p>How customers find your brand and products.</p>
+        </div>
+        <div>
+            <h3>Social</h3>
+            <p>Awareness,engagement and community interaction.</p>
+        </div>
+        <div>
+            <h3>CRM</h3>
+            <p>Personalized communication and relationship management.</p>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <p>Questions,issue resolution and customer confidence.</p>
+        </div>
+        <div>
+            <h3>AI</h3>
+            <p>Intelligent assistance,recommendations and automation.</p>
+        </div>
+    </div>
+</section>
+<section class="improvement">
+    <div class="title">
+        <span>EXPERIENCE IMPROVEMENT</span>
+        <h2>Move From Friction to Flow</h2>
+    </div>
+    <div class="flow">
+        <div>
+            <b>Identify</b>
+            <p>Find where customers struggle.</p>
+        </div>
+        <div>
+            <b>Understand</b>
+            <p>Discover why friction exists.</p>
+        </div>
+        <div>
+            <b>Redesign</b>
+            <p>Create a simpler experience.</p>
+        </div>
+        <div>
+            <b>Measure</b>
+            <p>Track the impact.</p>
+        </div>
+        <div>
+            <b>Improve</b>
+            <p>Continuously optimize.</p>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h2>Map Your Customer Experience.</h2>
+    <p>Discover the moments where better digital design can create greater value.</p>
+    <button onclick="mapMessage()">Create Experience Map</button>
+</section>
+<footer>
+    © 2026 Vertexa Digital Agency. All Rights Reserved.
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+function showJourney(industry){
+    const title=document.getElementById("journeyTitle");
+    const description=document.getElementById("journeyDescription");
+    const map=document.getElementById("journeyMap");
+    if(industry==="retail"){
+        title.innerText="Retail Customer Journey";
+        description.innerText="Customers discover products,research options,compare alternatives,purchase and build loyalty.";
+        map.innerHTML="<div>DISCOVER</div><span>→</span><div>RESEARCH</div><span>→</span><div>COMPARE</div><span>→</span><div>PURCHASE</div><span>→</span><div>LOYALTY</div>";
+    }
+    if(industry==="healthcare"){
+        title.innerText="Healthcare Customer Journey";
+        description.innerText="Patients search for information,select providers,schedule appointments and continue their care journey.";
+        map.innerHTML="<div>SEARCH</div><span>→</span><div>SELECT</div><span>→</span><div>BOOK</div><span>→</span><div>CONSULT</div><span>→</span><div>FOLLOW-UP</div>";
+    }
+    if(industry==="education"){
+        title.innerText="Education Customer Journey";
+        description.innerText="Students discover programs,compare courses,apply,enroll and continue learning.";
+        map.innerHTML="<div>DISCOVER</div><span>→</span><div>EXPLORE</div><span>→</span><div>APPLY</div><span>→</span><div>ENROLL</div><span>→</span><div>LEARN</div>";
+    }
+    if(industry==="finance"){
+        title.innerText="Finance Customer Journey";
+        description.innerText="Customers discover financial products,evaluate trust,complete onboarding and manage their relationship.";
+        map.innerHTML="<div>DISCOVER</div><span>→</span><div>COMPARE</div><span>→</span><div>APPLY</div><span>→</span><div>ONBOARD</div><span>→</span><div>MANAGE</div>";
+    }
+}
+function mapMessage(){
+    alert("Vertexa can help you map and redesign your complete digital customer journey.");
+}
+</script>
+</body>
+</html>

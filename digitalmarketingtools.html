@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Marketing Tools|Vertexa</title>
+    <link rel="stylesheet" href="../css/digitalmarketingtools.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Vertexa<span>.</span></div>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="../services/services.html">Services</a>
+        <a href="../industries/industries.html">Industries</a>
+        <a href="../services/aisolutions.html">AI Solutions</a>
+        <a href="../resources/digitalmarketingtools.html" class="active">Tools</a>
+        <a href="../contact/contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-button">Start a Project</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="homepage.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="industries.html">Industries</a>
+    <a href="aisolutions.html">AI Solutions</a>
+    <a href="digitalmarketingtools.html">Tools</a>
+    <a href="contact.html">Contact</a>
+</div>
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">DIGITAL MARKETING TOOLS</span>
+        <h1>Make Better Marketing<span>Decisions With Data.</span></h1>
+        <p>Explore simple and practical marketing calculators created by Vertexa to help businesses estimate campaign performance,understand conversions and evaluate digital marketing efforts.</p>
+    </div>
+    <div class="hero-visual">
+        <div class="marketing-window">
+            <div class="window-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="marketing-title"></div>
+            <div class="marketing-cards">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="marketing-chart">
+                <div class="chart-bar one"></div>
+                <div class="chart-bar two"></div>
+                <div class="chart-bar three"></div>
+                <div class="chart-bar four"></div>
+                <div class="chart-bar five"></div>
+                <div class="chart-bar six"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section intro">
+    <div class="section-heading center">
+        <span class="tag">MARKETING INTELLIGENCE</span>
+        <h2>Small Calculations Can Lead to Better Decisions</h2>
+        <p>Digital marketing generates huge amounts of data.Our tools help simplify some of that data into useful numbers so you can quickly evaluate campaigns and identify opportunities.</p>
+    </div>
+    <div class="benefit-grid">
+        <div class="benefit">
+            <span>01</span>
+            <h3>Understand Performance</h3>
+            <p>Quickly estimate important marketing metrics and understand how your campaigns are performing.</p>
+        </div>
+        <div class="benefit">
+            <span>02</span>
+            <h3>Plan Campaigns</h3>
+            <p>Use estimated budgets,leads and conversions to create realistic campaign expectations.</p>
+        </div>
+        <div class="benefit">
+            <span>03</span>
+            <h3>Identify Opportunities</h3>
+            <p>Compare marketing outcomes and identify areas where better strategy or optimization may improve results.</p>
+        </div>
+    </div>
+</section>
+<section class="section tools-section" id="tools">
+    <div class="section-heading">
+        <span class="tag">FREE MARKETING TOOLS</span>
+        <h2>Useful Calculators for Your Next Campaign</h2>
+        <p>Enter a few numbers and explore estimated marketing metrics.These calculators are designed for planning and educational purposes and should be used alongside your actual campaign data.</p>
+    </div>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <div class="tool-icon">💰</div>
+            <h3>Marketing ROI Calculator</h3>
+            <p>Estimate the return generated from your marketing investment.</p>
+            <label>Marketing Investment</label>
+            <input type="number"id="investment"placeholder="Example:50000">
+            <label>Revenue Generated</label>
+            <input type="number"id="revenue"placeholder="Example:100000">
+            <button onclick="calculateROI()">Calculate ROI</button>
+            <div class="result"id="roiResult">Enter values to calculate your estimated ROI.</div>
+        </div>
+         <div class="tool-card">
+            <div class="tool-icon">🎯</div>
+            <h3>Lead Conversion Calculator</h3>
+            <p>Calculate the percentage of leads that become customers.</p>
+            <label>Total Leads</label>
+            <input type="number"id="leads"placeholder="Example:1000">
+            <label>Customers</label>
+            <input type="number"id="customers"placeholder="Example:80">
+            <button onclick="calculateConversion()">Calculate Conversion</button>
+            <div class="result" id="conversionResult">Enter your leads and customer numbers.</div>
+        </div>
+         <div class="tool-card">
+            <div class="tool-icon">❤️</div>
+            <h3>Social Engagement Calculator</h3>
+            <p>Estimate engagement rate based on interactions and audience.</p>
+            <label>Total Interactions</label>
+            <input type="number"id="interactions"placeholder="Example:2500">
+            <label>Total Followers</label>
+            <input type="number"id="followers"placeholder="Example: 50000">
+            <button onclick="calculateEngagement()">Calculate Engagement</button>
+            <div class="result" id="engagementResult">Enter interactions and followers.</div>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon">📈</div>
+            <h3>Campaign Performance Score</h3>
+            <p>Enter your campaign metrics to generate a simple performance score for planning and evaluation.</p>
+            <label>Click-Through Rate (%)</label>
+            <input type="number" id="ctr" placeholder="Example: 4">
+            <label>Conversion Rate (%)</label>
+            <input type="number" id="campaignConversion" placeholder="Example: 5">
+            <label>Engagement Rate(%)</label>
+            <input type="number" id="campaignEngagement" placeholder="Example: 7">
+            <button onclick="calculateScore()">Calculate Score</button>
+            <div class="result" id="scoreResult">Enter campaign metrics to receive a score.</div>
+        </div>
+    </div>
+    <button class="reset-btn" onclick="resetTools()">Reset All Tools</button>
+</section>
+<section class="strategy section">
+    <div class="strategy-content">
+        <span class="tag">BEYOND CALCULATORS</span>
+        <h2>Numbers Are Useful. Strategy Makes Them Powerful.</h2>
+        <p>Marketing metrics are only one part of successful digital growth.A strong campaign combines audience research,positioning,creative content,technology,conversion optimization and continuous measurement.</p>
+        <p>Vertexa helps businesses connect these different areas into one focused digital growth strategy.</p>
+        <a href="services.html" class="primary-btn">Explore Our Services →</a>
+    </div>
+    <div class="strategy-visual">
+        <div class="strategy-circle">
+            <span>DATA</span>
+        </div>
+        <div class="strategy-item item-one">Strategy</div>
+        <div class="strategy-item item-two">Creative</div>
+        <div class="strategy-item item-three">Technology</div>
+        <div class="strategy-item item-four">Growth</div>
+    </div>
+</section>
+<section class="section tips">
+    <div class="section-heading center">
+        <span class="tag">MARKETING TIPS</span>
+        <h2>Build Campaigns Around Meaningful Metrics</h2>
+        <p>Avoid focusing on a single number.The strongest marketing decisions come from understanding how multiple metrics work together.</p>
+    </div>
+    <div class="tips-grid">
+        <div class="tip-card">
+            <strong>01</strong>
+            <h3>Track Conversions</h3>
+            <p>Traffic is useful,but conversions help you understand whether your digital experience is creating business value.</p>
+        </div>
+        <div class="tip-card">
+            <strong>02</strong>
+            <h3>Understand Your Audience</h3>
+            <p>Better audience understanding helps improve messaging,targeting,content and customer journeys.</p>
+        </div>
+        <div class="tip-card">
+            <strong>03</strong>
+            <h3>Optimize Continuously</h3>
+            <p>Digital campaigns should evolve based on performance data,customer feedback and changing market conditions.</p>
+        </div>
+        <div class="tip-card">
+            <strong>04</strong>
+            <h3>Think Long Term</h3>
+            <p>Sustainable digital growth comes from consistent strategy,strong experiences and continuous improvement.</p>
+        </div>
+    </div>
+</section>
+<section class="cta-section">
+    <span class="tag white-tag">NEED A STRATEGY?</span>
+    <h2>Let's Turn Your Marketing Data Into Growth.</h2>
+    <p>Vertexa combines strategy,creative design,technology and analytics to help businesses build stronger digital marketing experiences.</p>
+    <a href="contact.html" class="cta-button">Talk to Vertexa→</a>
+</section>
+<footer>
+    <p>© 2026 Vertexa Digital Agency. All Rights Reserved.</p>
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+function calculateROI(){
+    const investment=parseFloat(document.getElementById("investment").value);
+    const revenue=parseFloat(document.getElementById("revenue").value);
+    const result=document.getElementById("roiResult");
+    if(!investment||!revenue||investment<=0){
+        result.textContent="Please enter valid investment and revenue values.";
+        return;
+    }
+    const roi=((revenue-investment)/investment)*100;
+    result.innerHTML="Estimated ROI:<strong>"+roi.toFixed(2)+"%</strong>";
+}
+function calculateConversion(){
+    const leads=parseFloat(document.getElementById("leads").value);
+    const customers=parseFloat(document.getElementById("customers").value);
+    const result=document.getElementById("conversionResult");
+    if(!leads||leads<=0||customers<0){
+        result.textContent="Please enter valid lead and customer values.";
+        return;
+    }
+    const conversion=(customers/leads)*100;
+    result.innerHTML="Estimated Conversion Rate:<strong>"+conversion.toFixed(2)+"%</strong>";
+}
+function calculateEngagement(){
+    const interactions=parseFloat(document.getElementById("interactions").value);
+    const followers=parseFloat(document.getElementById("followers").value);
+    const result=document.getElementById("engagementResult");
+    if(!interactions||!followers||followers<= 0){
+        result.textContent="Please enter valid interaction and follower numbers.";
+            return;
+    }
+    const engagement=(interactions/followers)*100;
+        result.innerHTML="Estimated Engagement Rate:<strong>"+engagement.toFixed(2)+"%</strong>";
+}
+function calculateScore(){
+    const ctr=parseFloat(
+        document.getElementById("ctr").value)||0;
+    const conversion= parseFloat(document.getElementById("campaignConversion").value)||0;
+    const engagement=parseFloat(
+        document.getElementById("campaignEngagement").value)||0;
+    const result=document.getElementById("scoreResult");
+    if(ctr===0&&conversion===0&&engagement===0){
+        result.textContent="Please enter at least one campaign metric.";
+            return;
+    }
+    let score=(ctr*10)+(conversion*8)+(engagement*5);
+        score=Math.min(score,100);
+    let message="";
+    if(score>=75){
+        message = "Strong Campaign";
+    }else if(score>=50){
+        message="Good Potential";
+    }else if(score>=25){
+        message="Needs Optimization";
+    }else{
+        message="Review Your Strategy";
+    }
+    result.innerHTML="Campaign Score:<strong>"+score.toFixed(0)+
+        "/100</strong><br>"+message;
+    }
+function resetTools(){
+    document.querySelectorAll("input").forEach(input => {
+        input.value = "";
+    });
+    document.getElementById("roiResult").textContent="Enter values to calculate your estimated ROI.";
+        document.getElementById("conversionResult").textContent="Enter your leads and customer numbers.";
+        document.getElementById("engagementResult").textContent="Enter interactions and followers.";
+        document.getElementById("scoreResult").textContent="Enter campaign metrics to receive a score.";
+}
+</script>
+</body>
+</html>
