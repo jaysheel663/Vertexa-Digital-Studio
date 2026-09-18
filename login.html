@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vertexa|Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main class="login-page">
+        <section class="visual-section">
+            <div class="visual-overlay"></div>
+            <div class="visual-content">
+                <div class="logo-small">VXA</div>
+                <h1>Build.Create.<span>Innovate.</span></h1>
+                <p>Welcome to Vertexa,where digital ideas become powerful experiences.</p>
+            </div>
+        </section>
+        <section class="login-section">
+            <div class="login-card">
+                <div class="brand">
+                    <div class="brand-logo">VXA</div>
+                    <h2>Vertexa</h2>
+                </div>
+                <div class="heading">
+                    <h1>Welcome Back</h1>
+                    <p>Login to continue to your Vertexa account.</p>
+                </div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email"id="email"placeholder="Enter your email"required>
+                        <small id="emailError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-box">
+                            <input type="password"id="password"placeholder="Enter your password"required>
+                            <button type="button"id="showPassword">Show</button>
+                        </div>
+                        <small id="passwordError"></small>
+                    </div>
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox"id="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" id="forgotPassword">Forgot password?</a>
+                    </div>
+                    <button type="submit"class="login-button">Login</button>
+                    <p id="loginMessage"></p>
+                </form>
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                <p class="signup-text">Don't have an account?
+                    <a href="signup.html">Create an account</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+    const loginForm=document.getElementById("loginForm");
+        const password=document.getElementById("password");
+        const showPassword=document.getElementById("showPassword");
+            const loginMessage=document.getElementById("loginMessage");
+            showPassword.addEventListener("click",function(){
+            if(password.type==="password"){
+                password.type ="text";
+                showPassword.textContent="Hide";
+            }else{
+                password.type="password";
+                showPassword.textContent="Show";}});
+        loginForm.addEventListener("submit",function(event){
+            event.preventDefault();
+            const email=document.getElementById("email").value.trim();
+                const passwordValue=document.getElementById("password").value;
+                const savedUser=JSON.parse(localStorage.getItem("vertexaUser"));
+                loginMessage.textContent="";
+                if(!savedUser){
+                loginMessage.textContent="No account found.Please create an account first.";
+                    loginMessage.className = "error";
+                return;
+            }
+            if(email!==savedUser.email){
+                loginMessage.textContent="Email address does not match.";
+                    loginMessage.className="error";
+                return;}
+            if(passwordValue!==savedUser.password){
+                loginMessage.textContent ="Incorrect password.";
+                    loginMessage.className = "error";
+                return;}
+            loginMessage.textContent ="Login successful! Welcome to Vertexa.";
+                loginMessage.className="success";
+            setTimeout(function(){alert("Welcome to Vertexa!");},800);});
+        document
+            .getElementById("forgotPassword")
+            .addEventListener("click",function(event){
+                event.preventDefault();
+                alert("Password recovery will be available soon.");});
+            </script>
+</body>
+</html> 

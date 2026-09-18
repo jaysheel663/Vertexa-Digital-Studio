@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vertexa|Sign Up</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <main class="signup-page">
+        <section class="signup-section">
+            <div class="signup-card">
+                <div class="brand">
+                    <div class="brand-logo">VXA</div>
+                    <h2>Vertexa</h2>
+                </div>
+                <div class="heading">
+                    <h1>Create Account</h1>
+                    <p>Start your journey with Vertexa today.</p>
+                </div>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text"id="name"placeholder="Enter your full name"required></div>
+                     <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email"id="email"placeholder="Enter your email"required>
+                    </div>
+                     <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-box">
+                            <input type="password"id="password"placeholder="Create a password"required>
+                            <button type="button"id="showPassword">
+                            Show</button>
+                        </div>
+                        <small>Use at least 6 characters.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-box">
+                            <input type="password"id="confirmPassword"placeholder="Confirm your password"required>
+                            <button type="button"id="showConfirmPassword">Show</button>
+                        </div>
+                    </div>
+                     <label class="terms">
+                        <input type="checkbox"id="terms"required>
+                        <span>I agree to the<a href="#">Terms & Conditions</a>and<a href="#">Privacy Policy</a>.
+                        </span>
+                    </label>
+                    <button type="submit"class="signup-button">Create Account</button>
+                     <p id="signupMessage"></p>
+                </form>
+                 <div class="divider">
+                    <span>OR</span>
+                </div>
+                <p class="login-text">Already have an account?
+                    <a href="login.html">Login</a></p>
+            </div>
+        </section>
+         <section class="visual-section">
+            <div class="visual-overlay"></div>
+            <div class="visual-content">
+                <div class="logo-small">VXA</div>
+                <h1>Turn Ideas Into<span>Impact.</span></h1>
+                <p>Join Vertexa and explore innovative digital experiences designed for the future.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+    const signupForm =document.getElementById("signupForm");
+            const password=document.getElementById("password");
+            const confirmPassword=document.getElementById("confirmPassword");
+            const showPassword=document.getElementById("showPassword");
+            const showConfirmPassword=document.getElementById("showConfirmPassword");
+            const signupMessage=document.getElementById("signupMessage");
+            if(password.type==="password"){
+                password.type="text";
+                showPassword.textContent="Hide";
+            }else{
+                password.type="password";
+                showPassword.textContent="Show";};
+        showConfirmPassword.addEventListener("click",function(){
+                if(confirmPassword.type === "password"){
+                    confirmPassword.type="text";
+                    showConfirmPassword.textContent="Hide";
+                }else{
+                    confirmPassword.type ="password";
+                    showConfirmPassword.textContent="Show";
+                }
+            }
+        );
+        signupForm.addEventListener("submit",function(event){event.preventDefault();
+                const name=document.getElementById("name").value.trim();
+                    const email=document.getElementById("email").value.trim();
+                    const passwordValue=password.value;
+                    const confirmPasswordValue =confirmPassword.value;
+                    signupMessage.textContent="";
+                if(passwordValue.length<6){
+                    signupMessage.textContent="Password must contain at least 6 characters.";
+                        signupMessage.className = "error";
+                    return;
+                }
+                if(passwordValue!==confirmPasswordValue){
+                    signupMessage.textContent="Passwords do not match.";
+                        signupMessage.className="error";
+                    return;
+                }
+                const existingUser=JSON.parse(localStorage.getItem("vertexaUser"));
+                    if(existingUser&&existingUser.email===email){
+                    signupMessage.textContent="An account with this email already exists.";
+                    signupMessage.className="error";
+                    return;
+                }
+                const user={name:name,email:email,password:passwordValue};
+                localStorage.setItem("vertexaUser",JSON.stringify(user));
+                signupMessage.textContent ="Account created successfully!";
+                    signupMessage.className="success";
+                setTimeout(function(){window.location.href="login.html";},1200);});
+        </script>
+</body>
+</html> 

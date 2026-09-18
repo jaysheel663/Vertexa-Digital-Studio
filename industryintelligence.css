@@ -1,0 +1,363 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f8fafc;
+    color:#111827;
+    line-height:1.7;
+}
+html{
+    scroll-behavior:smooth;
+}
+.navbar{
+    background:white;
+    min-height:75px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,0.06);
+}
+.logo{
+    font-size:26px;
+    font-weight:800;
+    color:#6366f1;
+}
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+.nav-links a{
+    text-decoration:none;
+    color:#111827;
+    font-weight:600;
+}
+.nav-links a:hover{
+    color:#6366f1;
+}
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:28px;
+}
+.hero{
+    min-height:650px;
+    padding:90px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+.hero-content{
+    max-width:650px;
+    color:white;
+}
+.tag,
+.section-title span{
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:800;
+}
+.hero h1{
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.1;
+    margin:20px 0;
+}
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.btn{
+    padding:13px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+}
+.primary{
+    background:white;
+    color:#6366f1;
+}
+.secondary{
+    border:1px solid white;
+    color:white;
+}
+.hero-visual{
+    width:400px;
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.intel-circle{
+    width:310px;
+    height:310px;
+    border:2px solid rgba(255,255,255,.5);
+    border-radius:50%;
+    position:relative;
+    animation:rotate 15s linear infinite;
+}
+.center-node{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:white;
+    color:#6366f1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+}
+.node{
+    position:absolute;
+    background:white;
+    color:#6366f1;
+    padding:10px 14px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:12px;
+}
+.n1{ 
+    top:-15px; 
+    left:120px; 
+}
+.n2{ 
+    right:-35px; 
+    top:120px; 
+}
+.n3{ 
+    bottom:-15px; 
+    left:120px; 
+}
+.n4{ 
+    left:-35px; 
+    top:120px; 
+}
+.n5{ 
+    top:35px; 
+    right:10px; 
+}
+@keyframes rotate{
+    from{
+        transform:rotate(0); 
+    }
+    to{ 
+        transform:rotate(360deg); 
+    }
+}
+.section{
+    padding:90px 8%;
+}
+.section-title{
+    max-width:750px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+.section-title span{
+    color:#6366f1;
+}
+.section-title h2{
+    font-size:42px;
+    line-height:1.2;
+    margin:10px 0;
+}
+.intelligence-grid,
+.signal-grid,
+.opportunity-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+.intel-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+    transition:.3s;
+}
+.intel-card:hover{
+    transform:translateY(-8px);
+}
+.icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#ede9fe;
+    color:#6366f1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.intel-card h3{
+    margin-bottom:10px;
+}
+.intel-card strong{
+    display:block;
+    margin-top:20px;
+    color:#6366f1;
+}
+.dark-section{
+    padding:90px 8%;
+    background:#111827;
+    color:white;
+}
+.light h2{
+    color:white;
+}
+.signal-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+.signal{
+    border:1px solid #374151;
+    padding:30px;
+    border-radius:15px;
+}
+.signal span{
+    color:#a78bfa;
+    font-size:25px;
+    font-weight:bold;
+}
+.signal h3{
+    margin:15px 0;
+}
+.meter-box{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.meter-row{
+    margin-bottom:30px;
+}
+.meter-row>div:first-child{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+.progress{
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+.progress span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#6366f1,#8b5cf6);
+}
+.opportunity-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+.opportunity-grid>div{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    border-left:4px solid #6366f1;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+.opportunity-grid h3{
+    margin-bottom:8px;
+}
+.cta{
+    padding:90px 8%;
+    text-align:center;
+    color:white;
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+.cta h2{
+    font-size:42px;
+}
+.cta p{
+    margin:15px 0 25px;
+}
+.cta button{
+    padding:14px 25px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    color:#6366f1;
+    font-weight:bold;
+    cursor:pointer;
+}
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+@media(max-width:900px){
+    .intelligence-grid,
+    .signal-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .opportunity-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-buttons{
+        justify-content:center;
+    }
+}
+@media(max-width:650px){
+    .menu-btn{
+        display:block;
+    }
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:25px;
+        text-align:center;
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .intelligence-grid,
+    .signal-grid,
+    .opportunity-grid{
+        grid-template-columns:1fr;
+    }
+    .hero{
+        padding:70px 6%;
+    }
+    .hero-visual{
+        width:300px;
+        height:300px;
+    }
+    .intel-circle{
+        width:240px;
+        height:240px;
+    }
+    .section{
+        padding:65px 6%;
+    }
+    .section-title h2,
+    .cta h2{
+        font-size:32px;
+    }
+}

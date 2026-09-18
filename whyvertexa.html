@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vertexa|Why Choose Us</title>
+    <link rel="stylesheet" href="../css/whyvertexa.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-box">VXA</span>
+        <span>Vertexa</span>
+    </div>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="../company/about.html">About</a>
+        <a href="../services/services.html">Services</a>
+        <a href="../projects/projects.html">Projects</a>
+        <a href="../methodology/process.html">Process</a>
+        <a href="../contact/contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-button">Get Started</a>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">WHY VERTEXA</span>
+        <h1>Why Choose <span>Vertexa?</span></h1>
+        <p>Vertexa is a digital agency focused on creating modern,practical and user-focused digital experiences for businesses.</p>
+        <p>We combine creativity,technology and a structured development approach to turn ideas into reliable digital solutions.</p>
+        <a href="homepage.html" class="primary-button">Explore Vertexa</a>
+    </div>
+    <div class="hero-card">
+        <div class="big-icon">VXA</div>
+        <h3>Technology Meets Creativity</h3>
+        <p>We bring design,development and digital thinking together to create meaningful experiences.</p>
+    </div>
+</section>
+<section class="reasons" id="reasons">
+    <div class="section-heading">
+        <span class="tag">OUR DIFFERENCE</span>
+        <h2>What Makes<span>Vertexa Different?</span></h2>
+        <p>Our approach focuses on building digital products that are useful,scalable and aligned with business objectives.</p>
+    </div>
+    <div class="reason-grid">
+        <div class="reason-card">
+            <span>01</span>
+            <h3>User-Focused Approach</h3>
+            <p>We design digital experiences around the needs,expectations and goals of the people who use them.</p>
+        </div>
+        <div class="reason-card">
+            <span>02</span>
+            <h3>Modern Technology</h3>
+            <p>We use modern web technologies and development practices to create efficient and maintainable digital solutions.</p>
+        </div>
+        <div class="reason-card">
+            <span>03</span>
+            <h3>Creative Thinking</h3>
+            <p>We combine creative ideas with practical implementation to make digital products visually engaging and useful.</p>
+        </div>
+        <div class="reason-card">
+            <span>04</span>
+            <h3>Scalable Solutions</h3>
+            <p>Our solutions are planned with future growth in mind,allowing businesses to expand their digital capabilities.</p>
+        </div>
+        <div class="reason-card">
+            <span>05</span>
+            <h3>Performance & Quality</h3>
+            <p>We pay attention to performance,responsiveness,usability and overall quality throughout development.</p>
+        </div>
+        <div class="reason-card">
+            <span>06</span>
+            <h3>Clear Communication</h3>
+            <p>We believe regular communication and understanding requirements are essential for successful projects.</p>
+        </div>
+    </div>
+</section>
+<section class="approach">
+    <div class="approach-text">
+        <span class="tag">OUR APPROACH</span>
+        <h2>Building Digital Solutions With <span>Purpose</span></h2>
+        <p>Every project starts with understanding the problem.We then plan,design,develop and test the solution before delivering the final digital product.</p>
+        <ul>
+            <li>Understand business requirements</li>
+            <li>Plan the right digital solution</li>
+            <li>Create intuitive user experiences</li>
+            <li>Develop reliable technology</li>
+            <li>Test and improve the product</li>
+        </ul>
+    </div>
+    <div class="approach-box">
+        <h3>Vertexa Focus</h3>
+        <div class="focus-item">
+            <strong>Design</strong>
+            <span>+</span>
+            <strong>Technology</strong>
+        </div>
+        <div class="focus-line"></div>
+        <div class="focus-result">Meaningful Digital Experiences</div>
+    </div>
+</section>
+<section class="values">
+    <div class="section-heading">
+        <span class="tag">OUR VALUES</span>
+        <h2>What We <span>Believe In</span></h2>
+    </div>
+    <div class="value-grid">
+        <div class="value-card">
+            <h3>Innovation</h3>
+            <p>Exploring better ideas and modern approaches to solve digital challenges.</p>
+        </div>
+        <div class="value-card">
+            <h3>Simplicity</h3>
+            <p>Making complex digital experiences easier to understand and use.</p>
+        </div>
+        <div class="value-card">
+            <h3>Reliability</h3>
+            <p>Building solutions that businesses and users can depend on.</p>
+        </div>
+        <div class="value-card">
+            <h3>Growth</h3>
+            <p>Creating digital solutions that support long-term business and product growth.</p>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <div>
+        <span class="tag">LET'S BUILD</span>
+        <h2>Have a Digital Idea?</h2>
+        <p>Let's turn your idea into a meaningful digital experience.</p>
+        <a href="contact.html" class="primary-button">Talk to Vertexa</a>
+    </div>
+</section>
+<footer class="footer">
+    <p>© 2026 Vertexa Digital Agency.All rights reserved.</p>
+</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener("click",function(event){
+        const targetId=this.getAttribute("href");
+        if(targetId!=="#"){
+            const target=document.querySelector(targetId);
+            if(target){
+                event.preventDefault();
+                target.scrollIntoView({behavior:"smooth",block:"start"});}}});});
+window.addEventListener("scroll",function(){
+    const navbar=document.querySelector(".navbar");
+    if(window.scrollY>50){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }});
+</script>
+</body>
+</html> 
